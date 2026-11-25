@@ -16,3 +16,11 @@ if written != roast:
     exit(1)
 
 print('Validation passed')
+
+# Additional check: ensure roast length is within limit
+if len(roast) > 200:
+    print('ERROR: Roast exceeds 200 characters')
+    exit(1)
+
+print(f'Roast length: {len(roast)} / 200 characters')
+print('Status: VALID')
